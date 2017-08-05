@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/todo3"
+
+    tools:context="com.example.imtiaj.todolistv1.AddEventActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add new Event"
+        android:gravity="center"
+        android:background="#a1a69b"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Event Name:"
+            android:layout_weight="1"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+
+            />
+        <EditText
+            android:id="@+id/eventNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Enter event name"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Event Date:"
+            android:layout_weight="1"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+
+            />
+        <EditText
+            android:id="@+id/eventDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Pick a date"
+            android:onClick="setDateFuntion"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Event Time:"
+            android:layout_weight="1"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+
+
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="Pick event eime"
+            android:id="@+id/eventTimeEdit"
+            android:onClick="setTimeFunction"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category:"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/eventCategoryEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorPrimaryDark"
+
+
+
+            >
+        </Spinner>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <CheckBox
+            android:id="@+id/eventIsAlarmedEdit"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:onClick="alarmNotificationOnFunction"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/eventAlarmTimeOptionEdit"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            >
+        </Spinner>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Priority:"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:id="@+id/eventPriorityOptionEdit"
+            >
+        </Spinner>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonLayoutId"
+        android:layout_marginBottom="10dp"
+        >
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:layout_marginLeft="15dp"
+            android:onClick="cancelEventAddingFunction"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:layout_marginRight="15dp"
+            android:onClick="saveEventFunction"
+            android:textColor="#0a0707"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

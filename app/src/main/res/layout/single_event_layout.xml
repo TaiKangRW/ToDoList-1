@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#0b0b0b"
+            android:id="@+id/eventNameId"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:textColor="#0b0b0b"
+            android:id="@+id/eventRatingId"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*****"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#0b0b0b"
+            android:id="@+id/eventTimeAmPmId"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06:00 am"
+            android:layout_weight="3"
+            />
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#0b0b0b"
+            android:id="@+id/eventAlarmedId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not alarmed"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/eventDateId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12 Dec 2017"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#0b0b0b"
+
+        />
+
+
+</LinearLayout>
